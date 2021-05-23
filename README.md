@@ -2,4 +2,4 @@
 
 My personal github page.
 
-rukrypto.github.io/
+https://rukrypto.github.io/
