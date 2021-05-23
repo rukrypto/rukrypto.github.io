@@ -66,7 +66,51 @@ module.exports = {
 
       {
         test: /\.html$/i,
-        loader: 'html-loader'
+        loader: 'html-loader',
+        options: {
+          sources: {
+            list: [
+              // All default supported tags and attributes
+              '...',
+              {
+                tag: 'a',
+                attribute: 'href',
+                type: 'src',
+                filter: (tag, attribute, attributes, resourcePath) => {
+                  // The `tag` argument contains a name of the HTML tag.
+                  // The `attribute` argument contains a name of the HTML attribute.
+                  // The `attributes` argument contains all attributes of the tag.
+                  // The `resourcePath` argument contains a path to the loaded HTML file.
+                  if ( attributes.find(dataSet => dataSet.name === "data-image" && dataSet.value === "true") ) {
+                  console.log(attributes)
+                    return true;
+                  } return false; 
+                }
+              },
+              {
+                tag: 'div',
+                attribute: 'data-bg',
+                type: 'src',
+                filter: (tag, attribute, attributes, resourcePath) => {
+                  // The `tag` argument contains a name of the HTML tag.
+                  // The `attribute` argument contains a name of the HTML attribute.
+                  // The `attributes` argument contains all attributes of the tag.
+                  // The `resourcePath` argument contains a path to the loaded HTML file.
+
+                  if ( attributes.find(dataSet => dataSet.name === "data-image" && dataSet.value === "true") ) {
+                  console.log(attributes)
+                    return true;
+                  } return false; 
+                }
+              },
+              {
+                tag: 'img',
+                attribute: 'data-src',
+                type: 'src'
+              }
+            ],
+          },
+        }
       },
 
       {
@@ -100,8 +144,8 @@ module.exports = {
       },
 
       {
-        test: /\.(svg)$/i,
-        type: 'asset/inline',
+        test: /\.svg$/i,
+        type: 'asset',
         generator: {
          filename: 'assets/img/[name].[hash][ext][query]'
         }, 
@@ -130,6 +174,14 @@ module.exports = {
         type: 'asset',
         generator: {
          filename: 'assets/media/[name].[hash][ext][query]'
+        }
+      },
+
+      {
+        test: /\.pdf$/i,
+        type: 'asset/resource',
+        generator: {
+         filename: 'assets/media/[name][ext][query]'
         }
       }
     ]

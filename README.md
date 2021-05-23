@@ -1,6 +1,6 @@
-# Webpack Starter
+# rukrypto portfolio
 
-Templete for Webpack 5.
+Web Developer
 
 
 ### Step 1:

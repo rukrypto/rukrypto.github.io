@@ -8,7 +8,7 @@ module.exports = merge(common, {
 	devServer: {
 		port: 8080,
 		contentBase: '../dist',
-		open: 'chrome'
+		open: 'brave'
 	},
 	target: 'web'
 });
