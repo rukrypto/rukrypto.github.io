@@ -62,7 +62,7 @@
     }
 
     grecaptcha.ready(function() {
-      grecaptcha.execute('6LcHZqcaAAAAAAwB0dMmdHuE2l1YSH2DPN6U0m7R', {action: 'submit'}).then(function(token) {
+      grecaptcha.execute('6LcHZqcaAAAAAGfRjlKRZfVaArs2I6e-1v7HGNQp', {action: 'submit'}).then(function(token) {
           // Add your logic to submit to your backend server here.
 
       disableAllButtons(form);

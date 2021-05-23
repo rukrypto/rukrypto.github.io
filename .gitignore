@@ -4,3 +4,4 @@ public/
 src/
 
 babel.config.json
+package-lock.json
