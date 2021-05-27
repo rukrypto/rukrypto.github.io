@@ -1,4 +1,0 @@
-This is a Brave Rewards publisher verification file.
-
-Domain: rukrypto.github.io
-Token: 25bfd246ca420048767164374f0f3f034e64c47c456b8104cbfe37b1ac3a804d
