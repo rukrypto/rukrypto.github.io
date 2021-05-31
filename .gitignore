@@ -2,7 +2,7 @@ node_modules/
 config/
 public/
 src/
-/dist/
+dist/
 
 babel.config.json
 package-lock.json
