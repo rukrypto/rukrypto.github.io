@@ -32,7 +32,7 @@ import LazyLoad from 'vanilla-lazyload';
       document.body.classList.remove('dark-theme');
     }
   });
-   
+  
   switchInput.addEventListener('change', function() {
     let theme;
 
@@ -406,21 +406,8 @@ llenas links rrss listo
 
 pages-test performance
 multi-lenguaje, despues
-*/
-
-
-
-
-
-/*
-
-Se registró 'rukrypto.github.com'.
-
-Inserta esta clave de sitio en el código HTML que utiliza tu sitio.
-  6LcHZqcaAAAAAGfRjlKRZfVaArs2I6e-1v7HGNQp
-
-Utiliza esta clave secreta para la comunicación entre tu sitio y reCAPTCHA.
-  6LcHZqcaAAAAAAwB0dMmdHuE2l1YSH2DPN6U0m7R
-
-
+cambiar fondo light de portfolio
+cambiar npm por react
+cambiar orden de animacionec formulario descendente
+english version
 */
