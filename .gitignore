@@ -1,8 +1,1 @@
 node_modules/
-config/
-public/
-src/
-dist/
-
-babel.config.json
-package-lock.json
