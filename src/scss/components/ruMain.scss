@@ -111,7 +111,8 @@
 		padding: 4rem 2rem;
 
 		overflow: hidden;
-		background-color: var(--solid-white-bg);
+		background-color: var(--light-white-bg);
+
 
 		& > .container {
 
@@ -225,6 +226,7 @@
 
 		& > .ruPortfolio {
 			padding: 4rem 10px;
+			background-color: var(--light-white-bg);
 
 			& .ruPortfolio__item__figure {
 				max-width: 200px;

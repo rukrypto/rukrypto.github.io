@@ -2,7 +2,7 @@
 	--text-blac-lg: #333;
 	--border-white: white;
 	--border-lightgray: lightgray;
-	--box-shadow: rgba(0, 0, 0, 0.4);
+	--box-shadow: rgba(0, 0, 0, 0.5);
 	--box-shadow-hover: rgba(0, 0, 0, 0.6);
 }
 
@@ -75,7 +75,7 @@
 			border: 1px solid var(--border-lightgray);
 			border-radius: 20px;
 			background-color: white;
-			box-shadow: 1px 2px 7px var(--box-shadow);
+	    box-shadow: 1px 1px 5px var(--border-shadow);
 
 			transition: .5s;
 			transition-timing-function: ease;
