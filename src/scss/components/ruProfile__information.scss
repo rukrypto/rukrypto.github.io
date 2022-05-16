@@ -146,7 +146,11 @@
 			& .ruProfile__information__item__description {
 				display: flex;
 				align-items: center;
-				justify-content: space-around;
+				justify-content: flex-start;
+
+				&__link {
+					margin: 0 15px;
+				}
 			}
 		}
 

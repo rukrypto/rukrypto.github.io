@@ -142,4 +142,9 @@ body {
 	& .bi-telegram  { transition: .5s; &:hover, &:focus, &:active { color: #198FCA; }}
 	& .bi-linkedin  { transition: .5s; &:hover, &:focus, &:active { color: #0270AD; }}
 	& .bi-instagram { transition: .5s; &:hover, &:focus, &:active { color: #D56054; }}
+	& .bi-google { transition: .5s; &:hover, &:focus, &:active { color: rgb(233, 67, 53); }}
+}
+
+.hidden {
+	display: none!important;
 }
