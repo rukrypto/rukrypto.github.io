@@ -110,7 +110,7 @@ import LazyLoad from 'vanilla-lazyload';
 
 {// Type Writer
   new TypeIt('#ruMessage', {
-    strings: ['Corporativo', 'Blog', 'Tienda Virtual', 'Personal'],
+    strings: ['JavaScript', 'Maquetación', 'WordPress'],
     nextStringDelay: ['4000', '2000'],
     speed: 85,
     deleteSpeed: 50,
