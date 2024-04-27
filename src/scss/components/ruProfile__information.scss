@@ -1,0 +1,217 @@
+:root {
+	--box-shadow-title:  rgb(0 0 0 / 20%);
+	--text-shadow: black;
+	--solid-white-bg: white;
+	--border-gray: gray;
+	--border-lightgray: lightgray;
+}
+
+.ruProfile__information {
+	// padding: 20px;
+	padding: 0;
+	margin: 15px 10px;
+	margin-left: 0;
+
+	width: calc(50% - 10px);
+	max-width: 520px;
+
+	&__title {
+		padding: 15px;
+		margin: 0 0 20px;
+		
+		width: 100%;
+
+		font-size: 25px;
+		font-size: 2.5rem;
+		font-weight: 600;
+		text-align: center;
+		// text-shadow: 1px 1px var(--text-shadow);
+		line-height: 1;
+
+		background-color: var(--solid-white-bg);
+    box-shadow: 1px 1px 5px var(--box-shadow-title);
+	}
+
+	&__item {
+		margin-bottom: 20px;
+		
+		height: auto;
+		min-height: 100px;
+		width: 100%;
+
+		display: flex;
+		// align-items: center;
+		justify-content: center;
+		flex-wrap: nowrap;
+
+		border-bottom: 2px solid var(--border-gray);
+		background-color: white;
+    // box-shadow: 1px 1px 5px var(--box-shadow-title);
+
+		&:nth-last-child(1) {
+			margin-bottom: 0;
+		}
+
+		&__figure {
+			margin: 0;
+			padding: 14px 15px;
+
+			// height: 100%;
+			width: 30%;
+
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			flex-direction: column;
+
+			border-right: 2px solid var(--border-lightgray);
+
+			&__icon {
+				margin: 0 auto 5px;
+				font-size: 35px;
+
+				&.lnr-graduation-hat {
+					margin-bottom: 0;
+					font-size: 45px;
+				}
+			}
+
+			&__title {
+				margin: 0;
+
+				font-size: 12px;
+				font-weight: 700;
+				text-align: center;
+				text-transform: uppercase;
+			}
+		}
+
+		&__description {
+			margin: 0;
+			padding: 15px 13px;
+
+			width: 70%;
+			display: flex;
+			align-items: center;
+			justify-content: flex-start;
+
+			&__link {
+				text-decoration: none!important;
+				
+				filter: grayscale(100%);
+				transition: .5s ease;
+
+				&:hover,	&:focus,	&:active, {
+					filter: grayscale(0%);
+				}
+				
+				& .bi {
+					margin: 0 3px;
+					font-size: 30px;
+				}
+			}
+
+			& ul, & ol {
+				margin: 0;
+				padding: 0 0 0 15px;
+
+				& li {
+					font-size: 14px;
+
+					&:nth-last-child(1) {
+						
+						& p{ 
+							margin: 0;
+						}
+					}
+				}
+			}
+
+			& p {
+				margin: 0 0 5px;
+
+				font-size: 14px;
+				line-height: 1.1;
+
+				& cite {
+					font-size: 12px;
+					font-style: normal;
+					line-height: 1;
+				}
+			}
+		}
+
+		&.-contact {
+
+			& .ruProfile__information__item__description {
+				display: flex;
+				align-items: center;
+				justify-content: flex-start;
+
+				&__link {
+					margin: 0 15px;
+				}
+			}
+		}
+
+		&.-courses {
+
+			& .ruProfile__information__item__description {
+
+				& .spotlight {
+					text-decoration: none;
+					vertical-align: middle;
+
+					& i {
+						margin: 0;
+
+						font-size: 18px;
+						position: relative;
+					}
+				}
+
+				& #coursesCollapse {
+					transition: .8s ease;
+				}
+
+				& .collapseButton {
+					margin: 0;		
+
+					color: inherit;
+					font-size: 12px;
+					font-weight: 700;
+					text-align: left;
+
+					border: none;
+					background-color: inherit;
+
+					& i {
+						margin: 0;
+						font-size: 10px;
+
+						&.bi-chevron-up {
+							display: none;
+						}
+					}
+
+					&.active {
+						margin-bottom: 5px;
+
+						& .bi-chevron-up {
+							display: initial;
+						}
+
+						& .bi-chevron-down {
+							display: none;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	@media (max-width: 991px) {
+		margin-right: 0;
+		width: 100%;
+	}
+}

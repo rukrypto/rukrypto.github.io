@@ -1,0 +1,46 @@
+.ruHome__universe {
+	position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+	z-index: -1;
+
+	margin: auto;
+	padding: 0;
+	
+	height: 100%;
+	width: 100%;
+
+	&__stars, &__twinkling {
+	  position: absolute;
+	  bottom: 0;
+	  left: 0;
+	  right: 0;
+	  top: 0;
+	
+	  display: block;
+	  height: 100%;
+	  width: 100%;
+	}
+
+	&__stars {
+	  z-index: 0;
+
+	  background-color: #000;
+	  background-image: url('../assets/img/stars.png');
+	  background-position: top center;
+	  background-repeat: repeat;
+	}
+
+	&__twinkling {
+	  z-index: 1;
+
+	  background-color: transparent;
+	  background-image: url('../assets/img/twinkling.png');
+	  background-position: top center;
+	  background-repeat: repeat;
+
+	  animation: moveTwinkling 200s linear infinite;
+	}
+}

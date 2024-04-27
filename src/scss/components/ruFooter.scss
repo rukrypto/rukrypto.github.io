@@ -1,0 +1,137 @@
+:root {
+	--footer-bg: rgb(0, 2, 12);
+	--text-lg: lightgray;
+	--text-shadow: black;
+	--color-white: white;
+}
+
+.ruFooter {
+	padding: 60px 20px 30px;
+
+	background-color: var(--footer-bg);
+
+	& > .container {
+
+		& > .row {
+		}
+	}
+
+	@media (max-width: 650px) {
+
+		& .ruFooter {
+
+			&__copyright {
+
+				&__logo {
+					text-align: center;
+				}
+
+				&__content {
+					text-align: center;
+				}
+			}
+
+			&__rrss {
+				width: 100%;
+				text-align: center;
+
+				& .aux-container {
+					justify-content: center;
+				}
+			}
+
+			&__madeIn {
+				height: auto;
+				width: 100%;
+				text-align: right;
+				justify-content: center;
+
+				margin: auto;
+				margin-right: 0;
+			}
+		}
+	}
+
+	&__copyright {
+		width: 100%;
+
+		&__logo {
+			color: var(--color-white);
+			font-size: 40px;
+			font-size: 4rem;
+			font-family: 'beatstreet';
+			text-transform: uppercase;
+			text-shadow: 1px 1px var(--text-shadow);
+			line-height: 1;
+		}
+
+		&__content {
+			margin: 0;
+
+			color: var(--text-lg);
+			font-size: 14px;
+		}
+	}
+
+	&__rrss {
+		width: 50%;
+
+		&__followMe {
+			margin: 0;
+
+			color: var(--text-lg);
+			font-size: 13px;
+		}
+
+		&__link {
+			text-decoration: none;
+
+			&:nth-child(1) {
+				margin-left: 0; 
+			}
+
+			& .bi {
+				margin: 0 5px;
+				color: var(--color-white);
+				font-size: 25px;
+
+				&:hover, &:active, &:focus {
+					color: var(--color-white);
+				}
+			}
+		}
+
+		& .aux-container {
+			height: 50px;
+			padding: 5px 0;
+
+			display: flex;
+			align-items: center;
+			justify-content: flex-start;
+			flex-wrap: wrap;
+		}
+	}
+
+	&__madeIn {
+		height: 50px;
+		width: 50%;
+
+
+		display: flex;
+		align-items: center;
+		justify-content: flex-end;
+		align-self: flex-end;
+		background-color: inherit;
+
+		& h6 {
+			margin: 0;
+
+			color: var(--text-lg);
+			font-size: 12px;
+			font-style: italic;
+			text-align: right;
+			vertical-align: middle;
+		}
+	}
+}
+
