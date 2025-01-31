@@ -1,0 +1,23 @@
+.ruHeader {
+	display: block;
+	position: fixed;
+	z-index: 5;
+	
+	height: auto;
+	width: 100%;
+
+	&__menu {
+
+		&__navbar {
+
+			& > .container {
+				height: inherit;
+
+				& > .row {
+					height: inherit;
+					justify-content: flex-end;
+				}
+			}
+		}
+	}
+}

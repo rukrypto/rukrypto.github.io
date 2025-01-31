@@ -1,0 +1,311 @@
+:root {
+	--text-blac-lg: #333;
+	--border-white: white;
+	--border-lightgray: lightgray;
+	--box-shadow: rgba(0, 0, 0, 0.5);
+	--box-shadow-hover: rgba(0, 0, 0, 0.6);
+}
+
+.ruPortfolio {
+
+	&__carousel {
+		padding: 0;
+		position: relative;
+
+		&__container {
+		}
+
+		&__controls {
+
+			&__button {
+				margin: auto;
+				position: absolute;
+				top: -35px;
+				bottom: 0;
+				left: 0;
+				right: 0;
+
+				border: none;
+				background: transparent;
+
+				z-index: 1;
+
+				&.-prev {
+					right: 95%;
+				}
+
+				&.-next {
+					left: 95%;
+				}
+
+				& i {
+					color: #999;
+					font-size: 30px;
+
+					transition: .5s ease;
+
+					&:hover {
+						color: var(--text-blac-lg);
+					}
+
+					&:before {
+						border-radius: 100%;
+						background-color: var(--border-white);
+					}
+				}
+			}
+		}
+	}
+
+	&__item {
+		outline: none!important;
+
+		&__figure {
+			margin: 10px auto;
+			padding: 35px 15px 0;
+
+			height: auto;
+			max-width: 250px;
+
+			display: flex;
+			flex-direction: column;
+			overflow: hidden;
+			position: relative;
+
+			border: 1px solid var(--border-lightgray);
+			border-radius: 20px;
+			background-color: white;
+	    box-shadow: 1px 1px 5px var(--border-shadow);
+
+			transition: .5s;
+			transition-timing-function: ease;
+
+			&:focus {
+				outline: none;
+			}
+
+			&:hover {
+				box-shadow: 1px 3px 10px var(--box-shadow-hover);
+
+				& .ruPortfolio__item__figure__image {
+					// transform: scale(1.3);
+
+					& span {
+						background-color: rgba(0,0,0,.5);
+					}
+				}
+
+				& .ruPortfolio__item__figure__buttons__icon {
+
+					&.-button {
+						// background-color: rgba(0,0,0,.7);
+					}
+
+					&.-image, &.-link {
+						opacity: 1;
+					}
+				}
+
+			}
+
+			&__image {
+				height: 325px;
+				width: 100%;
+
+				position: relative;
+
+				border: 2px solid #777;
+				background-size: cover;
+				background-position: top center;
+				background-repeat: no-repeat;
+
+				transition: .8s;
+				transition-timing-function: ease-in-out;
+
+				// transform: scale(1);
+				& span {
+					position: absolute;
+					
+					height: 100%;
+					width: 100%;
+
+					background-color: transparent;
+					transition: .8s;
+					transition-timing-function: ease-in-out;
+				}
+			}
+
+			&__buttons {
+				padding: 0 20px;
+				
+				height: 55px;
+				width: 100%;
+
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+				
+				&__icon {
+					transition: .8s;
+					transition-timing-function: ease-in-out;
+
+					&.-image, &.-link {
+						outline: none;
+						cursor: pointer;
+						
+						opacity: 0;
+						height: 40px;
+
+
+						& img {
+							height: 100%;
+							width: auto;
+						}
+					}
+					
+					&.-button {
+						height: 30px;
+						width: 30px;
+
+						font-size: 0px;
+						text-decoration: none!important;
+
+						border-radius: 50%;
+						background-color: rgba(0,0,0,.3);
+
+						pointer-events: none;
+					}
+				}
+			}
+		}
+
+		&.-disabledLink {
+
+			& .ruPortfolio__item__figure__buttons__icon.-link {
+				visibility: hidden;
+			}
+		}
+
+		&.-telematica {
+		
+			& .ruPortfolio__item__figure__image {
+				// background-image: url('../assets/img/portfolio/telematica-sm.png');
+			}
+		}
+
+		&.-drpropertycare {
+		
+			& .ruPortfolio__item__figure__image {
+				// background-image: url('../assets/img/portfolio/drpropertycare-sm.png');
+			}
+		}
+
+		&.-eliteing {
+		
+			& .ruPortfolio__item__figure__image {
+				// background-image: url('../assets/img/portfolio/eliteing-sm.png');
+			}
+		}
+
+		&.-triada {
+		
+			& .ruPortfolio__item__figure__image {
+				// background-image: url('../assets/img/portfolio/triada-sm.png');
+			}
+		}
+
+		&.-soclean {
+		
+			& .ruPortfolio__item__figure__image {
+				// background-image: url('../assets/img/portfolio/soclean-sm.png');
+			}
+		}
+
+		&.-segex {
+		
+			& .ruPortfolio__item__figure__image {
+				// background-image: url('../assets/img/portfolio/segex-sm.png');
+			}
+		}
+
+		&.-telematicaBlog {
+		
+			& .ruPortfolio__item__figure__image {
+				// background-image: url('../assets/img/portfolio/telematicaBlog-sm.png');
+			}
+		}
+
+		&.-triadaBlog {
+		
+			& .ruPortfolio__item__figure__image {
+				// background-image: url('../assets/img/portfolio/triadaBlog-sm.png');
+			}
+		}
+
+		&.-clickmediaBlog {
+		
+			& .ruPortfolio__item__figure__image {
+				// background-image: url('../assets/img/portfolio/clickmediaBlog-sm.png');
+			}
+		}
+
+		&.-clickmedia {
+		
+			& .ruPortfolio__item__figure__image {
+				// background-image: url('../assets/img/portfolio/clickmedia-sm.png');
+			}
+		}
+
+		&.-dupreeMail-1 {
+
+			& .ruPortfolio__item__figure__image {
+				// background-image: url('../assets/img/portfolio/dupreeMail-1-sm.png');
+			}
+		}
+
+		&.-dupreeMail-2 {
+
+			& .ruPortfolio__item__figure__image {
+				// background-image: url('../assets/img/portfolio/dupreeMail-2-sm.png');
+			}
+		}  
+
+		&.-clickmediaMail {
+		
+			& .ruPortfolio__item__figure__image {
+				// background-image: url('../assets/img/portfolio/clickmediaMail-sm.png');
+			}
+		}
+
+		&.-pucpMail {
+		
+			& .ruPortfolio__item__figure__image {
+				// background-image: url('../assets/img/portfolio/pucpMail-sm.png');
+			}
+		}
+
+		&.-provida {
+		
+			& .ruPortfolio__item__figure__image {
+				// background-image: url('../assets/img/portfolio/provida-sm.png');
+				background-position: 20%; 
+			}
+		}
+
+		&.-amb {
+		
+			& .ruPortfolio__item__figure__image {
+				// background-image: url('../assets/img/portfolio/amb-sm.png');
+				background-position: top left; 
+			}
+		}
+
+		&.-fobus {
+		
+			& .ruPortfolio__item__figure__image {
+				// background-image: url('../assets/img/portfolio/fobus-sm.png');
+				background-position: top left; 
+			}
+		}                                    
+	}
+}

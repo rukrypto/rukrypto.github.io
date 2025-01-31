@@ -1,0 +1,150 @@
+@import 'animate-css/animate.min.css';
+@import 'bootstrap/scss/bootstrap';
+@import 'bootstrap-icons/font/bootstrap-icons.css';
+@import 'tiny-slider/src/tiny-slider';
+@import 'components/ITCSS';
+@import 'components/ruHeader';
+@import 'components/ruHeader__menu';
+@import 'components/ruMain';
+@import 'components/ruHome__content';
+@import 'components/ruHome__universe';
+@import 'components/ruProfile__resume';
+@import 'components/ruProfile__information';
+@import 'components/ruProfile__skills';
+@import 'components/ruPayments__item';
+@import 'components/ruPortfolio__carousel';
+@import 'components/ruContact__form';
+@import 'components/ruFooter';
+@import 'components/colorScheme';
+
+
+* {
+  font-family: 'Raleway', sans-serif;
+
+  // border: 1px solid red;
+}
+
+html {
+	// font-size: 10px;
+	font-size: 62.5%;
+	// scroll-behavior: smooth;
+
+	&.hide-scrollbars {
+		overflow: hidden;
+	}
+
+	@media (max-width: 650px) {
+		// font-size: 9px;
+		font-size: 56.25%;
+
+		// font-size: 8px;
+		font-size: 50%;
+	}
+
+	@media (max-width: 450px) {
+		// font-size: 7px;
+		font-size: 43.75%;
+
+		// font-size: 6px;
+		// font-size: 37.5%;
+	}
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	// scroll-behavior: smooth;
+	position: relative;
+
+	// overflow-x: hidden;
+
+	& .container {
+		margin: auto;
+		padding: 0;
+
+		width: 100%;
+		
+		@media (max-width: 1200px) {
+			max-width: 1140px;
+		}
+
+		& > .row {
+			margin: auto;
+			padding: 0;
+
+			width: 100%;
+			max-width: 100%;
+		}
+	}
+
+	& .by__rukrypto {
+		position: fixed;
+		height: 100vh;
+		width: 100vw;
+		z-index: 999999;
+		background-color: #02040E;
+  	
+  	display: flex;
+  	align-items: center;
+  	justify-content: center;
+
+		&__spinner {
+			height: 40px;
+			width: 40px;
+			border-radius: 50%;
+			background: transparent;
+
+			border-top: 4px solid #fff;
+			border-right: 4px solid #fff;
+			border-bottom: 4px solid #777;
+			border-left: 4px solid #777;
+			animation: loading 1.2s infinite linear;
+		}
+	}
+
+	.tns-nav {
+		text-align: center;
+		margin: 10px 0;
+
+		& > [aria-controls] {
+	    width: 9px;
+	    height: 9px;
+	    padding: 0;
+	    margin: 0 5px;
+	    border-radius: 50%;
+	    background: #ddd;
+	    border: 0;
+		}
+
+		& > .tns-nav-active {
+			background: #999;
+		}
+	}
+
+	& #spotlight {
+
+		& .scene {
+			transition: 2s ease!important;
+		}
+
+		& .icon {
+			margin: 0 5px;
+		}
+	}
+
+	& .grecaptcha-badge {
+  }
+
+	& .bi-github    { transition: .5s; &:hover, &:focus, &:active { color: #742E8C; }}
+	& .bi-twitter   { transition: .5s; &:hover, &:focus, &:active { color: #1DA1F2; }}
+	& .bi-whatsapp  { transition: .5s; &:hover, &:focus, &:active { color: #25BD48; }}
+	& .bi-facebook  { transition: .5s; &:hover, &:focus, &:active { color: #4867AA; }}
+	& .bi-telegram  { transition: .5s; &:hover, &:focus, &:active { color: #198FCA; }}
+	& .bi-linkedin  { transition: .5s; &:hover, &:focus, &:active { color: #0270AD; }}
+	& .bi-instagram { transition: .5s; &:hover, &:focus, &:active { color: #D56054; }}
+	& .bi-google { transition: .5s; &:hover, &:focus, &:active { color: rgb(233, 67, 53); }}
+}
+
+.hidden {
+	display: none!important;
+}

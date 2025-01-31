@@ -1,0 +1,183 @@
+:root {
+	--home-bg: rgba(0,10,59,.2);
+	--color-white: white;
+	--border-white: white;
+	--text-shadow: black;
+	--border-gray: gray;
+	--border-lg: lightgray;
+	--color-white: white;
+	--solid-white-bg: white;
+	--border-white: white;
+}
+
+/*
+2 Letras; 300px alto x 416.77px ancho (208,385px ancho prom)
+ancho - alto = 116,77 padding (+120 relleno) / 2 (top/bottom)
+*/
+$padding-y: (236.77 / 300) / 2 * 1em;
+$padding-x: (120 / 300) / 2 * 1em;
+$border: 3 / 80 * 1em;
+
+
+.ruHome__content {
+	height: 100%;
+	width: 100%;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+
+	background-color: var(--home-bg);
+
+	& * {
+		color: var(--color-white);
+	}
+	
+	&__logo {
+		font-size: 80px;
+		font-size: 8rem;
+		padding: $padding-y $padding-x;
+		margin-bottom: 15px;
+
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		border: $border solid var(--border-white);
+		border-radius: 100%;
+		box-shadow: 0 0 250px #d3d3d3;
+
+		& .ruLogo {
+			display: inline-block;
+			
+			font-size: inherit;
+			font-family: serif;
+			line-height: 1;
+			text-transform: uppercase;
+
+			&.-scaleX {
+				transform: scaleX(-1);
+			}
+		}
+
+		& * {
+			// border: 1px solid yellow;
+		}
+	}
+
+	&__logotipo {
+
+		& .ruLogotipo {
+		}
+	}
+
+	&__description {
+
+		&__title {
+			margin-bottom: 10px;
+
+			font-size: 60px;
+			font-size: 6rem;
+			font-weight: 100;
+			text-align: center;
+			
+			& strong {
+				font-weight: 500;
+			}
+		}
+
+		& h2 { 
+			margin: 0;
+			font-size: 20px;
+			font-size: 2rem;
+			font-family: 'beatstreet';
+			letter-spacing: 2px;
+			line-height: 1;
+			text-align: center;
+			opacity: .9;
+			text-shadow: 1px 1px 1px var(--text-shadow);
+		}
+
+		&__text {
+			margin: 0;
+			font-size: 22px;
+			font-size: 2.2rem;
+			text-align: center;
+
+			& strong {
+				font-weight: 500;
+
+				& .ti-cursor {
+					margin: 0 0 0 1px!important;
+					color: var(--color-white)!important;
+					font-size: 30px!important;
+					font-size: 3rem!important;
+					font-weight: 600!important;
+					font-family: inherit!important;
+					line-height: 25px!important;
+					vertical-align: text-top!important;
+				}
+			}
+		}
+
+		&__button {
+			min-width: 17.5rem;//175px
+			text-align: center;
+			font-size: 23px;
+			font-size: 2.3rem;
+			font-weight: 700;
+			text-decoration: none;
+			text-transform: capitalize;
+			line-height: 1.2;
+
+			margin: 0px 12.5px;
+			padding: 7px 32px;
+			padding: 0.7rem 3.2rem;
+
+			transition: .5s ease;
+			border: 3px solid var(--border-white);
+			border-radius: 5px;
+
+			&:hover {
+				// color: inherit;
+			}
+			
+			&.-transparent {
+				color: var(--color-white);
+				text-shadow: 1px 1px var(--text-shadow);
+				background-color: transparent;
+
+				&:hover {
+					// color: rgba(255, 255, 255, .7);
+
+					border-right-color: var(--border-gray);  
+					border-bottom-color: var(--border-gray);
+				}
+			}
+
+			&.-solid {
+				color: black;
+				background-color: var(--solid-white-bg);
+				border-right-color: var(--border-lg);  
+				border-bottom-color: var(--border-lg);  
+
+				&:hover {
+					border-right-color: var(--border-gray);  
+					border-bottom-color: var(--border-gray);
+				}
+			}
+		}
+
+		& .aux-container {
+			margin-top: 20px;
+
+			display: flex;
+			align-items: center;
+			justify-content: center;
+
+			height: auto;
+			width: auto;
+		}
+	}
+}

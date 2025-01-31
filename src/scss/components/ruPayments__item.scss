@@ -1,0 +1,62 @@
+:root {
+  --border-shadow: rgba(0, 0, 0, 0.2);
+  --border-shadow-hover: rgba(0, 0, 0, 0.4);
+  --solid-white-bg: white;
+}
+
+.ruPayments__item {
+  margin: 10px;
+  padding: 0px;
+
+  height: 140px;
+  max-width: 220px;
+  
+  border-radius: 10px;
+  background-color: var(--solid-white-bg);
+  box-shadow: 1px 1px 5px var(--border-shadow);
+  // filter: grayscale(100%);
+
+  transition: .5s;
+  transition-timing-function: ease;
+  
+  &:hover {
+    box-shadow: 1px 3px 8px var(--border-shadow-hover);
+
+    & img {
+      filter: grayscale(0%);
+    }
+  }
+
+  &.-actived {
+    & img {
+      filter: grayscale(0%);
+    }
+  }
+  
+  &__link {
+	  padding: 25px;
+
+  	height: 100%;
+  	max-width: 220px;
+  	width: 100%;
+
+	  display: flex;
+	  align-items: center;
+	  justify-content: center;
+  }
+
+  &__image {
+		margin: 0 auto;
+		
+		width: 100%;
+		height: auto;
+    max-height: 60px;
+		
+		display: block;
+
+    filter: grayscale(100%);
+
+    transition: .5s;
+    transition-timing-function: ease;
+  }
+}

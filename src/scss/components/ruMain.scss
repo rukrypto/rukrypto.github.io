@@ -1,0 +1,259 @@
+:root {
+	--title-color: rgb(0, 2, 10);
+	--solid-white-bg: white;
+	--light-white-bg: rgb(247, 247, 247);
+}
+
+.ruMain {
+	height: auto;
+	width: 100%;
+
+	overflow: hidden;
+
+	&__title {
+		margin: 0 auto;
+		// margin-bottom: 40px;
+		margin-bottom: 1em;
+
+		width: auto;
+		position: relative;
+
+		color: var(--title-color);
+		// font-size: 40px;
+		font-size: 4rem;
+		font-weight: 700;
+		text-align: center;
+
+		&::after {
+			content: '';
+			position: absolute;
+			// top: 0;
+			left: 0;
+			right: 0;
+			bottom: -5px;
+			
+			margin: auto;
+			padding: 0;
+
+			height: 3px;
+			width: 40%;
+			// width: 50px;
+			
+			background-color: var(--title-color);
+			border-radius: 30px;
+		}
+
+		&__spacer {
+			display: block;
+
+			margin: 0;
+			padding: 0;
+
+			height: 0px;
+			width: 100%;
+		}
+	}
+
+	&__divider {
+		margin: 0px auto;
+		padding: 0;
+
+		display: block;
+		height: 1px;
+		width: 37.5%;
+		
+		background: rgb(0 0 0 / 20%);
+		box-shadow: 1px 1px 5px rgb(0 0 0 / 20%);
+
+		@media (max-width: 650px) {
+			width: 70%;
+		}
+	}
+
+	& .ruHome {
+		position: relative;
+		
+		width: 100%;
+		height: 100vh;
+		min-height: 720px;
+		max-height: 1080px;
+
+		box-shadow: 0 1px 5px #000;
+		z-index: 0;
+		
+		@media (max-width: 767px) {
+			min-height: 100vmax;
+		}
+
+		&__content {
+			padding: 0 20px;
+			padding: 0 2rem;
+		}
+	}
+
+	& > .ruProfile {
+		padding: 40px 20px;
+		padding: 4rem 2rem;
+		// background-color: rgb(248, 248, 248);
+		background-color: var(--solid-white-bg);
+
+		& > .container {
+
+			& > .row {
+				align-items: baseline;
+				justify-content: center;
+			}
+		}
+	}
+
+	& > .ruPortfolio {
+		padding: 40px 20px;
+		padding: 4rem 2rem;
+
+		overflow: hidden;
+		background-color: var(--light-white-bg);
+
+
+		& > .container {
+
+			& > .row {
+			}
+		}
+	}
+
+	& > .ruPayments {
+		padding: 40px 0px;
+		padding: 4rem 0rem;
+
+		background-color: var(--light-white-bg);
+
+		& > .container {
+
+			& > .row {
+				margin: auto;
+
+				max-width: 1140px;
+				justify-content: center;
+			}
+		}
+	}
+
+	& > .ruContact {
+		padding: 40px 20px;
+		padding: 4rem 2rem;
+
+		padding-bottom: 60px;
+		padding-bottom: 6rem;
+
+		background-color: var(--solid-white-bg);
+
+		& > .container {
+
+			& > .row {
+				justify-content: center;
+			}
+		}
+	}
+
+}
+
+@media (max-width: 450px) {
+	
+	.ruHeader {
+		&__menu__navbar {
+			padding: 0 10px;
+		}
+	}
+	
+	.ruMain {
+
+		& .ruHome {
+
+			&__content  {
+				padding: 0 10px;
+
+				& .ruHome__content__description__title {
+					font-size: 4.5rem
+				}
+
+				& .ruHome__content__description__text {
+					line-height: 1;
+				}
+
+				& .ruHome__content__description__button {
+					font-size: 2.2rem;
+				}
+			}
+		}
+
+		& > .ruProfile {
+			padding: 4rem 10px;
+
+			& .ruProfile__resume__description__text {
+				padding: 10px;
+				font-size: 15px;
+			}
+
+			& .ruProfile__information__item__description {
+				padding: 15px 10px;
+			}
+
+			& .ruProfile__information__item__description ul,
+			& .ruProfile__information__item__description ol {
+				padding: 0 0 0 10px;
+			}
+
+			& .ruProfile__information__item__figure__icon {
+				font-size: 30px;
+			}
+
+			& .ruProfile__information__item__figure__title {
+				font-size: 11px;
+			}
+
+			& .ruProfile__information__item__description__link .bi {
+				font-size: 25px;
+			}
+
+			& .ruProfile__information__item__description p {
+				font-size: 13px;
+			}
+
+			& .ruProfile__information__item__description p cite {
+				font-size: 11px;
+			}
+		}
+
+		& > .ruPortfolio {
+			padding: 4rem 10px;
+			background-color: var(--light-white-bg);
+
+			& .ruPortfolio__item__figure {
+				max-width: 200px;
+				max-height: 340px;
+			}
+
+			& .ruPortfolio__carousel__controls__button.-next {
+				left: 85%;
+			}
+		}
+
+		& > .ruPayments {
+		}
+
+		& > .ruContact {
+			padding: 4rem 10px;
+
+			& .ruContact__form__item__input {
+				font-size: 13px!important;
+			}
+		}
+	}
+
+	.ruFooter {
+
+		& .ruFooter__rrss__link .bi {
+			font-size: 20px;
+		}
+	}
+}

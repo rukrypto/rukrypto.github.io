@@ -1,0 +1,204 @@
+:root {
+	--border-lg: lightgrey;
+	--form-input-bg: #D0CECF;
+	--form-placeholder: #747474;
+	--form-thanks-color: #28a745;
+}
+
+.ruContact__form {
+	padding: 0;
+	height: auto;
+	width: 100%;
+	max-width: 1000px;
+
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: flex-start;
+	overflow: hidden;
+	
+	@media (max-width: 650px) {
+
+		& .ruContact__form {
+
+			&__item {
+
+				&__input {
+					width: 100%;
+					height: 35px;
+
+					&.-submit {
+						height: 40px;
+					}
+				}
+			}
+		}
+	}
+
+	&__item {
+		width: 100%;
+		height: auto;
+
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		flex-wrap: wrap;
+
+		&:nth-child(1) {
+
+			& .ruContact__form__item__input {
+				animation-delay: .5s;
+			}
+		}
+
+		&:nth-child(2) {
+
+			& .ruContact__form__item__input {
+				animation-delay: 1s;
+			}
+		}
+
+		&:nth-child(3) {
+
+			& .ruContact__form__item__input {
+				animation-delay: 1.5s;
+			}
+		}
+
+		&__input {
+			margin: 0 0 17px;
+			padding: 0 0 0 10px;
+
+			width: calc(50% - 10px);
+			height: 40px;
+
+			color: black;
+			font-size: 16px;
+			font-weight: 600;
+			letter-spacing: 3px;
+			// text-transform: uppercase;
+
+		  outline-color: transparent;
+			border: 1px solid var(--border-lg);
+			background-color: var(--form-input-bg);
+
+			transition: .5s ease;
+
+			&:focus {
+			  outline-color: #333;
+			}
+
+			&::placeholder {
+				color: var(--form-placeholder);
+				text-transform: uppercase;
+			}
+
+			&::value {
+				text-transform: uppercase;
+			}
+
+			&.-textArea {
+				margin: 0 0 20px;
+				padding: 10px 0 0 15px;
+
+				width: 100%;
+				height: 200px;
+				min-height: 200px;
+				max-height: 250px;
+
+				color: black;
+				font-size: 15px;
+				
+			  outline-color: transparent;
+				border: 1px solid var(--border-lg);
+				background-color: var(--form-input-bg);
+
+				animation-delay: 2s;
+				transition: .5s;
+			}
+
+			&.-submit {
+				margin-bottom: 0;
+				
+				cursor: pointer;
+				padding: 0;
+				
+				width: 150px;
+				height: 45px;
+				align-self: center;
+
+				color: var(--form-placeholder);
+				text-align: center;
+
+				background-color: transparent;
+				border: 2px solid var(--form-placeholder);
+				border-radius: 5px;
+
+				animation-delay: 2.5s;
+				transition: .5s;
+				transition-timing-function: ease-in-out;
+
+				display: flex;
+				align-items: center;
+				justify-content: center;
+
+				&:hover {
+					color: white;
+					background-color: var(--form-placeholder);
+				}
+			}
+		}
+
+		&__thanks {
+			width: 100%;
+			height: auto;
+
+			padding: 0;
+			margin: 0 0 15px;
+
+			display: none;
+			overflow: hidden;
+
+			& h3 {
+				padding: 15px;
+				margin: 0;
+				right: 100%;
+
+				display: block;
+				position: relative;
+				overflow: hidden;
+
+				color: white;
+				font-size: 20px;
+				font-weight: 600;
+				text-shadow: 1px 1px 1px black;
+				// text-align: center;
+				line-height: 1;
+
+				background-color: var(--form-thanks-color);
+				border: 2px solid var(--form-thanks-color);
+				border-radius: 3px;
+				transition: 1s ease-in;
+			}
+
+			&.active {
+				display: block;
+
+				& h3 {
+					right: 0%;
+				}
+			}
+		}
+	}
+
+	& .honeypot-field {
+		margin: 0;
+		padding: 0;
+
+		height: 0px;
+		width: 100%;
+
+		border: none;
+		overflow: hidden;
+	}
+}

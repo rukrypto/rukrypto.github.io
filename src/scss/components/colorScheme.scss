@@ -1,0 +1,146 @@
+:root {
+	--dark-card: rgb(25, 39, 52);
+	--dark-bg: rgb(21, 32, 43);
+	--dark-bg-strng: rgb(14, 22, 33);
+	--dark-menu-bg: rgb(16, 18, 22);
+	--dark-home-bg: rgb(14 22 33 / 70%);
+	--white: white;
+	--text-shadow: black;
+	--text-white: white;
+	--box-shadow: rgb(255 255 255 / 20%);
+	--border-gray: gray;
+	--payments-card:  rgb(249 250 251 / 5%);
+	--portfolio-item: rgb(249 250 251 / 90%);
+	--darl-form-input-bg: #f9fafbe6;
+
+	// --dark-card: rgb(33, 46, 54);
+	// --dark-bg: rgb(27, 40, 49);
+}
+
+body.dark-theme {
+	& .ruHeader__menu__navbar.active {
+	    background-color: var(--dark-menu-bg);
+
+	    & .ruHeader__menu__navbar__collapse {
+		    background-color: var(--dark-menu-bg);
+	    }
+	}
+
+	& .ruMain {
+		background-color: var(--dark-bg-strng);
+
+		&__title {
+			color: white;
+			text-shadow: 1px 1px var(--text-shadow);
+
+			&::after {
+				background-color: var(--white);
+			}
+		}
+
+		&__divider {
+			background-color: white;
+			box-shadow: 1px 1px 5px var(--box-shadow);
+		}
+	}
+
+	& .ruHome__content {
+		background-color: var(--dark-home-bg);
+
+		&__logo {
+			box-shadow: none;
+		}
+	}
+
+	& .ruProfile {
+		color: var(--text-white);
+		background-color: var(--dark-bg);
+
+		&__resume {
+
+			&__image { 
+				background-color: var(--dark-card);
+			}
+
+			&__description { 
+
+				&__title {
+					background-color: var(--dark-card);
+				}
+
+				&__text {
+					background-color: var(--dark-card);
+				}
+			}
+		}
+
+		&__information {
+
+			&__title { 
+				background-color: var(--dark-card);
+			}
+
+			&__item {
+				background-color: var(--dark-card);
+
+				& figure {
+					border-color: var(--border-gray);
+				}
+
+				& .ruProfile__information__item__description__link {
+					color: white!important;
+					filter: grayscale(0%);
+				}
+			}
+		}
+
+		&__skills {
+
+			&__title { 
+				background-color: var(--dark-card);
+			}
+
+			&__item {
+				border-color: gray;
+				background-color: var(--dark-card)!important;
+			}
+		}
+	}
+
+	& .ruPortfolio {
+		background-color: var(--dark-bg-strng);
+
+		&__item__figure {
+			background-color: var(--portfolio-item);
+		}
+
+		& .ruPortfolio__carousel__controls__button i {
+			color: lightgray;
+
+			&::after, &::before {
+				background-color: var(--dark-card);
+			}
+		}
+	}
+
+	& .ruPayments {
+		background-color: var(--dark-bg-strng);
+		
+		&__item {
+			// background-color: var(--dark-card);
+			background-color: var(--payments-card)
+		}
+	}
+
+	& .ruContact {
+		background-color: var(--dark-bg);
+
+		&__form__item__input {
+			background-color: var(--darl-form-input-bg);
+		}
+	}
+
+	& .ruFooter {
+		background-color: var(--dark-bg-strng);
+	}
+}
